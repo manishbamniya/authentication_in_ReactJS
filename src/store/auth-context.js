@@ -39,7 +39,7 @@ export const AuthContextProvider = (props) => {
   if (tokenData) {
     initialToken = tokenData.token;
   }
-  const [token, setToken] = us.getItemeState(initialToken);
+  const [token, setToken] = useState(initialToken);
   const userIsLoggedIn = !!token; //if token is string and not empty it will return true but if token is strig and empty it will return false
 
   const logoutHandler = useCallback(() => {
